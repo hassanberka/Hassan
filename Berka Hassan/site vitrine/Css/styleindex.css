@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,600&display=swap');
+html{
+	scroll-behavior: smooth;
+}
+body{
+    background-color: #fff;
+	font-family: 'Crimson Text', serif;
+	margin: 0;
+}
+
+
+      /* nav bar css */
+#logo{
+    width: 150px;
+    height: 110px;
+}
+nav {
+	z-index: 900;
+	right: 150px;
+	top: 15px;
+	height: 100px;
+	background-color: #fff;
+}
+nav .links {
+	padding: 0;
+	margin: 100px;
+	margin-top: 40px;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+nav .links li {
+	list-style: none;
+}
+nav .links a {
+	font-size: 40px;
+	font-weight: bold;
+	color: #50CBE4;
+	text-decoration: none;	
+	border-radius: 20px;
+	text-align: center;
+}
+nav .links a:hover{
+	text-decoration: underline overline;
+    font-weight: bold;
+	color: #000;
+}
+
+#nav-toggle {
+	position: absolute;
+	top: -100px;
+}
+nav .icon-burger {
+	display: none;
+	position: absolute;
+	right: 0px;
+	top: 30px
+}
+nav .icon-burger .line {
+	width: 30px;
+	height: 5px;
+	background-color: #50CBE4;
+	margin: 5px;
+	border-radius: 3px;
+	transition: all .3s ease-in-out;
+}
+
+
+       /* Slides css */
+.slides{
+	position: relative;
+	margin-top: 50px;
+	/* margin-left: 9%; */
+	width: 100%;
+  }
+
+/* Next & previous buttons */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	/* transition: background-color 0.6s ease; */
+  }
+  
+  .active, .dot:hover {
+	background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+  }
+  
+  @keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+  }
+     
+  
+ 
+  /* aprés slides :D */
+
+  fieldset{
+	  border: none;
+	  display: flex;
+	  flex-direction: row;
+	  justify-content: space-around;
+	  height: 740px;
+
+  }
+  #main {
+	margin-top: 50px;
+	margin-right:14% ;
+	}
+	#main1{
+		justify-content: center;
+		margin-top: 12%;
+	}
+	#main1 h1{
+		align-content: center;
+		color: #50CBE4;
+		font-size: 50px;
+		font-weight: bold;
+		animation: textanimation 1s ease-in-out;
+	}
+	@keyframes textanimation{
+		0% {
+			letter-spacing: 10px;
+		}
+		100% {
+			letter-spacing: 1px;
+		}
+	}
+	
+	#main1 p{
+     font-size: 25px;
+	}
+
+	.middle{
+		position: relative;
+		margin-top: 300px;
+		left: 75%;
+		transform: translate(-50%,-50%);
+	  }
+	  .card{
+		/* cursor: pointer; */
+		width: 350px;
+		height: 500px;
+	  }
+	  .front,.back{
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		backface-visibility: hidden;
+		position: absolute;
+		transition: transform .6s linear;
+	  }
+	  .front img{
+		height: 100%;
+	  }
+	  .front{
+		transform: perspective(600px) rotateY(0deg);
+	  }
+	  .back{
+		height: 100%;
+		background: #50CBE4;
+		transform: perspective(600px) rotateY(180deg);
+
+	  }
+	  .back-content{
+		color: #fff;
+		width: 100%;
+	  }
+	 .card:hover > .front{
+		transform: perspective(600px) rotateY(-180deg);
+	  }
+	  .card:hover > .back{
+		transform: perspective(600px) rotateY(0deg);
+	  }
+	  .back .back-content .h2 .span{
+		  align-content: center;
+	  }
+
+	  /* footer */
+
+	  .footer-bottom{
+		background: #50CBE4;
+		width: 100%;
+		padding: 20px 0;
+		text-align: center;
+		/* margin-top: -5%; */
+	}
+	.footer-bottom p{
+		font-size: 14px;
+		word-spacing: 2px;
+		text-transform: capitalize;
+	}
+	.footer-bottom span{
+		text-transform: uppercase;
+		opacity: .4;
+		font-weight: 200;
+	}
+
+
+
+	/* formulaire pay css */
+	.row {
+		display: flex;
+		-ms-flex-wrap: wrap; 
+		flex-wrap: wrap;
+	  }
+	  
+	  .col-50 {
+		flex: 50%;
+	  }
+	  
+	  .col-75 {
+		flex: 75%;
+	  }
+	  
+	  .col-50,
+	  .col-75 {
+		padding: 0 16px;
+	  }
+	  
+	  .containerF {
+
+		display: none;
+		background-color: #f2f2f2;
+		padding: 5px 20px 15px 20px;
+		border: 1px solid #50CBE4;
+		border-radius: 3px;
+		box-shadow:
+		0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+		0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+		0 12.5px 10px rgba(0, 0, 0, 0.06),
+		0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+		0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+		0 100px 80px rgba(0, 0, 0, 0.12) ;
+		min-width: 500px;
+
+		margin-left: 25%;
+		margin-right:25% ;
+	  
+	  }
+	  
+	  input[type=text] {
+		width: 100%;
+		margin-bottom: 20px;
+		padding: 12px;
+		border: 1px solid #50CBE4;
+		border-radius: 3px;
+	  }
+	  
+	  label {
+		margin-bottom: 10px;
+		display: block;
+	  }
+	  
+	  
+	  .btn {
+		background-color: #50CBE4;
+		color: white;
+		padding: 12px;
+		margin: 10px 0;
+		border: none;
+		width: 25%;
+		border-radius: 3px;
+		cursor: pointer;
+		font-size: 17px;
+	  }
+	  
+	  .btn:hover {
+		background-color: #50CBE4;
+	  }
+	  
+	  hr {
+		border: 1px solid #50CBE4;
+	  }
+	  .good{
+		  padding: 10px 30px;
+		  background-color: #50CBE4;
+		  outline: none;
+		  border: none;
+		  border-radius: 10px;
+		  cursor: pointer;
+	  }
+	  .good a{
+		text-decoration: none;
+		color: white;
+	  }
+
+	  .header h1{
+			align-content: center;
+			color: #50CBE4;
+			font-size: 50px;
+			font-weight: bold;
+	  }
+	  .container{
+		margin-left: 25%;
+		margin-right:25%
+
+	  }
+	  .container input{
+		  width: 80%;
+	  }
+	  .contactform{
+		  display: none;
+	  }
+
+         /* media van bar */
+
+@media screen and (max-width: 750px) {
+ 
+	#logo{
+		display: none;
+	}
+
+	nav .links {
+		float: none;
+		position: fixed;
+		z-index: 900;
+		left: -190px;
+		right: -210px;
+		top: 100px;
+		bottom: 100%;
+		width: auto;
+		height: auto;
+		flex-direction: column;
+		justify-content: space-evenly;
+		background-color: rgba(0,0,0,.8);
+		overflow: hidden;
+		box-sizing: border-box;
+		transition: all .5s ease-in-out;
+	}
+	nav .links li {
+		list-style: none; 
+		margin: 10px;
+	}
+	nav .links a {
+		font-size: 20px;
+	}
+
+	nav .links a:hover{
+		color: #fff;
+	}
+	nav :checked ~ .links {
+		bottom: 0;
+	}
+	nav .icon-burger {
+		display: block;
+	}
+	nav :checked ~ .icon-burger .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(2) {
+		opacity: 0;
+	}
+
+	fieldset{
+		display: flex;
+	  flex-direction: column;
+	  height: auto;
+	}
+	#main{
+		margin-left: -50%;
+		margin-bottom: -60%;
+	}
+	.btn{
+		width: 30%;
+	}
+}

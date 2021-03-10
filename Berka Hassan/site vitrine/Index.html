@@ -1,0 +1,147 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site officiel</title>
+
+   
+    <link rel="stylesheet" href="Css/styleindex.css">
+</head>
+
+<body>
+    <nav>
+        <input id="nav-toggle" type="checkbox">
+        <ul class="links">
+            <li><a href="#ha">Home</a></li>
+            <li><a href="#has">About Us</a></li>
+            <img id="logo" src="img/logo11.png">
+            <li><a href="#buy" onclick="myFunction()">Buy Now</a></li>
+            <li><a href="#MPS" onclick="MPS()">Contact</a></li>
+        </ul>
+        <label for="nav-toggle" class="icon-burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+    </nav>
+    <div class="slides">
+        <div class="mySlides fade">
+
+            <img src="img/img5.png" style="width:100%; height:70%">
+        </div>
+        <div class="mySlides fade">
+            <img src="img/img4.png" style="width:100%; height:70%">
+        </div>
+        <div class="mySlides fade">
+            <img src="img/img1.png" style="width:100%; height:70%">
+        </div>
+        <div class="mySlides fade">
+            <img src="img/img2.png" style="width:100%; height:70%">
+        </div>
+        <div class="mySlides fade">
+            <img src="img/img3.png" style="width:100%; height:70%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+    </div>
+
+    <fieldset>
+<section id="main">
+
+            <div class="card middle" id="has">
+                <div class="front">
+                    <img src="img/handsan.png" alt="">
+                </div>
+
+                <div class="back">
+                    <div class="back-content middle">
+                        <h2>It's Take Just</h2>
+                        <a onclick="MPS()" style="cursor: pointer;">1 Click To Contact Us</a>
+                    </div>
+                </div>
+
+        </section>
+
+        <section id="main1">
+            <h1>
+                About our product : 
+            </h1>
+            <p>Stand-alone hand sanitizing stations allow you to take preventative actions into your own hands to stop the spread of harmful bacteria and germs at your workplace, school, playground or other communal space.<br><br><br>Hand sanitizing stations are portable and come in 30 bright colors and also you can put your own logo, providing employees and guests a centralized place to disinfect their hands frequently. Stand-alone hand sanitizing dispensers can reduce the number of germs transmitted through personal contact.</p>
+            <div style="text-align: right;"><button id="edit" class="good" onclick="myFunction()"><a href="#buy">Buy Now</a></button></div>
+        </section>
+
+    </fieldset>
+
+   <form class="containerF" id="container" >
+    <div class="col-50" id="buy">
+        <h3>Billing Address</h3>
+        <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Lotfi M. Oeaqim">
+        <label for="email"><i class="fa fa-envelope"></i> Email</label>
+        <input type="text" id="email" name="email" placeholder="lotfi0%corona@example.com">
+        <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+        <input type="text" id="adr" name="address" placeholder="address">
+        <label for="city"><i class="fa fa-institution"></i> City</label>
+        <input type="text" id="city" name="icty" placeholder="city">
+
+        <div class="row">
+          <div class="col-50">
+            <label for="zip">zip code</label>
+            <input type="text" id="zip" name="zip" placeholder="ayi nmr">
+          </div>
+        </div>
+      </div>
+      <button class="btn" onclick="myFunction1()">Make an order</button>
+    </form>
+
+
+
+
+    <form class="contactform" id="MPS">
+    <div class="container">
+        <div class="header">
+            <h1>Contact us</h1>
+        </div>
+        <form id="form" class="form">
+            <div class="form-control">
+                <label for="username">Name</label>
+                <input type="text" placeholder="haydcorona" id="name"/>
+            </div>
+            <div class="form-control">
+                <label for="username">Email</label>
+                <input type="text" placeholder="a@example.com" id="email" />
+            </div>
+            <div class="form-control">
+                <label for="username">your message</label>
+                <input type="text" placeholder="your message" id="password"/>
+            </div>
+            <button class="btn" onclick="MPS1()">Send message</button>
+        </form>
+    </div>
+
+</form>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>copyright &copy;2021 Hand Sanitizer. Stay <span>SAFE</span></p>
+        </div>
+    </footer>
+
+
+
+    <script src="java/jvindex.js"></script>
+</body>
+
+</html>
